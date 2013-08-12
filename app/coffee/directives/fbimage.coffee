@@ -4,7 +4,7 @@ FacebookImageDirective = ($rootScope) ->
     link: (scope, elm, attrs) ->
         setSrc = (src) ->
             console.log src, elm
-            elm.css('background', "url(#{src})");
+            elm.css('background-image', "url(#{src})");
 
         attrs.$observe('fbImage', (value) ->
             src = scope.$eval(value)
