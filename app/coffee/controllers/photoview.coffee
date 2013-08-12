@@ -1,4 +1,5 @@
 PhotoViewController = ($scope, $location, photo) ->
+    $('#photoview').addClass('photoview-active')
     $scope.photo = photo.data
     $scope.tags = photo.tags?.data
     $scope.ratio = photo.data.width/photo.data.height

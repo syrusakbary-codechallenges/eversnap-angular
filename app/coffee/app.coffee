@@ -31,10 +31,10 @@ configFn = ($routeProvider, $locationProvider, $httpProvider,
             url: ':photoId',
             templateUrl: 'partials/photoview.html',
             onEnter: () ->
-                $('body').css({position:'fixed',width:'100%'})
+                $('#photoview').addClass('photoview-active')
             ,
             onExit: () ->
-                $('body').css('position','')
+                $('#photoview').removeClass('photoview-active')
             ,
             resolve: {
                 photo:  ($q, $stateParams, $photo) ->

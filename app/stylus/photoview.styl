@@ -1,28 +1,38 @@
 #photoview
-	z-index -1
+	display none
+	position fixed
+	overflow auto
+	top 0
+	right 0
+	bottom 0
+	left 0
+	&.photoview-active
+		display block
+
 .photoview__layer
 	position fixed
 	z-index 100
 	top 0
-	bottom 0
-	right 0
-	left 0
-	background:rgba(20,20,20,.85);
+	width 100%
+	height 100%
+	background:rgba(20,20,20,.85)
 
 .photoview__photo
-	position fixed
+	display inline-block
+	position relative
 	z-index 200
-	top 0
 	margin 20px
 	background white
 	box-shadow 0 0 10px black
-	overflow: hidden
+	overflow hidden
+
 
 .photo-stage
 	background black
 	float left
 	text-align center
 	vertical-align middle
+	background black
 	display table-cell
 	position relative
 	line-height 0
@@ -45,11 +55,20 @@
 
 .photo-info
 	background white
-	width 300px
-	float left
 	height 100%
 	overflow: auto
 	padding .5rem
+
+.photo-stage
+	margin-right 300px
+
+.photo-info
+	position absolute
+	width 300px
+	overflow auto
+	top 0
+	bottom 0
+	right 0
 
 .photo__title
 	font-size 2rem
@@ -79,3 +98,17 @@
 	display block
 	margin-top .2rem
 	font-size .8rem
+
+
+@media only screen and (max-width: 799px)
+	.photo-stage
+		margin-right 0
+		width 100%
+
+	.photo-info
+		width 100%
+		position relative
+		top auto
+		left auto
+		right auto
+		bottom auto
