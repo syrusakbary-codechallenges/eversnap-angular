@@ -1,0 +1,12 @@
+<section id="connect">
+	<h1 class="connect__title">Connect with facebook</h1>
+    <div ng-switch on="connected">
+        <div ng-switch-when="true">
+            <h3>You are already connected.</h3>
+            <a href="#/albums">Go to albums</a>
+        </div>
+        <div ng-switch-default>
+        	<fb:login-button show-faces="true" max-rows="1" size="large" scope='user_photos'></fb:login-button>
+        </div>
+    </div>
+</section>

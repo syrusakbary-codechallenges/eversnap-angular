@@ -1,0 +1,54 @@
+#photos
+	@extends .wrapper
+
+.photos__title
+	@extends .main-title
+
+.photos-page__albums
+	color #999
+	font-size 1.5rem
+	text-align center
+	display block
+	margin-top 2rem
+	margin-bottom -1.5rem
+
+.photos__list
+	list-style none
+	// &:hover
+	// 	.albums__item
+	// 		opacity .3
+	// 		&:hover
+	// 			opacity: 1
+
+.photos__item
+	width 180px
+	height @width
+	overflow hidden
+	display inline-block
+	position relative
+	margin 10px
+	line-height @height
+	text-align center
+	transition all 200ms linear
+	background white
+	box-shadow 0 2px 5px rgba(0,0,0,.6)
+	&:hover
+		transform scale(1.1)
+		.albums__name
+			opacity 1
+
+.photo__thumbnail
+	width 180px
+	height @width
+	background-size cover
+	background-position 50% 25%
+
+
+.photos-page__more
+	text-shadow 0 1px white
+	font-size 1.5rem
+	margin 1em
+	display block
+	text-align center
+	cursor hand
+	cursor pointer

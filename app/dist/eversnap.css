@@ -1,0 +1,39 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-family:inherit;font-size:100%;vertical-align:baseline}
+body{line-height:1;color:#000;background:#fff}
+ol,ul{list-style:none}
+table{border-collapse:separate;border-spacing:0;vertical-align:middle}
+caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}
+a img{border:none}
+body{background:#eee url("../images/background.png");font-family:'Lato',sans-serif}
+h1,h2,h3,h4{font-family:'Droid Serif',serif}
+.main-title,.albums__title,.photos__title,.connect__title{font-size:3rem;color:#666;text-shadow:0 1px #fff;text-align:center;margin:2rem 0}
+a{text-decoration:none}
+.wrapper,#albums,#photos,#connect{width:800px;margin:0 auto;}
+@media only screen and (max-width: 399px){.wrapper,#albums,#photos,#connect,#albums,#photos,#connect{width:200px}
+}@media only screen and (min-width: 400px) and (max-width: 599px){.wrapper,#albums,#photos,#connect,#albums,#photos,#connect{width:400px}
+}@media only screen and (min-width: 600px) and (max-width: 799px){.wrapper,#albums,#photos,#connect,#albums,#photos,#connect{width:600px}
+}.albums__list{list-style:none}
+.albums__item{width:180px;display:inline-block;vertical-align:top;position:relative;margin:10px;line-height:;text-align:center;-webkit-transition:all 200ms linear;-moz-transition:all 200ms linear;-o-transition:all 200ms linear;-ms-transition:all 200ms linear;transition:all 200ms linear;background:#fff;-webkit-box-shadow:0 2px 5px rgba(0,0,0,0.6);box-shadow:0 2px 5px rgba(0,0,0,0.6)}
+.albums__cover{width:180px;height:180px;-webkit-background-size:cover;-moz-background-size:cover;background-size:cover;background-position:50% 25%}
+.albums__name{margin:1rem;color:#666;text-align:center;display:block;text-decoration:none;font-size:1.2rem;-webkit-transition:opacity 200ms linear;-moz-transition:opacity 200ms linear;-o-transition:opacity 200ms linear;-ms-transition:opacity 200ms linear;transition:opacity 200ms linear}
+.albums-page__more{text-shadow:0 1px #fff;font-size:1.5rem;margin:1em;display:block;text-align:center;cursor:hand;cursor:pointer}
+.photos-page__albums{color:#999;font-size:1.5rem;text-align:center;display:block;margin-top:2rem;margin-bottom:-1.5rem}
+.photos__list{list-style:none}
+.photos__item{width:180px;height:180px;overflow:hidden;display:inline-block;position:relative;margin:10px;line-height:180px;text-align:center;-webkit-transition:all 200ms linear;-moz-transition:all 200ms linear;-o-transition:all 200ms linear;-ms-transition:all 200ms linear;transition:all 200ms linear;background:#fff;-webkit-box-shadow:0 2px 5px rgba(0,0,0,0.6);box-shadow:0 2px 5px rgba(0,0,0,0.6);}
+.photos__item:hover{-webkit-transform:scale(1.1);-moz-transform:scale(1.1);-o-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1);}
+.photos__item:hover .albums__name{opacity:1;-ms-filter:none;filter:none}
+.photo__thumbnail{width:180px;height:180px;-webkit-background-size:cover;-moz-background-size:cover;background-size:cover;background-position:50% 25%}
+.photos-page__more{text-shadow:0 1px #fff;font-size:1.5rem;margin:1em;display:block;text-align:center;cursor:hand;cursor:pointer}
+#photoview{z-index:-1}
+.photoview__layer{position:fixed;z-index:100;top:0;bottom:0;right:0;left:0;background:rgba(20,20,20,0.85)}
+.photoview__photo{position:fixed;z-index:200;top:0;margin:20px;background:#fff;-webkit-box-shadow:0 0 10px #000;box-shadow:0 0 10px #000;overflow:hidden}
+.photo-stage{background:#000;float:left;text-align:center;vertical-align:middle;display:table-cell;position:relative;line-height:0}
+.photo-stage__image-next{position:absolute;right:0;top:0;bottom:0;width:60%;background:transparent;display:block;cursor:hand;cursor:pointer;text-indent:-10000px}
+.photo-stage__image{display:inline;max-width:100%}
+.photo-info{background:#fff;width:300px;float:left;height:100%;overflow:auto;padding:.5rem}
+.photo__title{font-size:2rem;margin-bottom:1rem}
+.photo-comments__title,.photo-tags__title{font-size:1.5rem;color:#666;margin:.5rem 0}
+.photo-tags__list{list-style:circle}
+.photo-coments__item{margin:.7rem 0}
+.photo-comments__item-name{color:#3b5998;font-weight:bold;font-size:1rem;margin-bottom:.2rem}
+.photo-comments__item-date{color:#999;display:block;margin-top:.2rem;font-size:.8rem}

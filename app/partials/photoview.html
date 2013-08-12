@@ -1,0 +1,30 @@
+<div class="photoview__layer" ng-click="closeView()">
+</div>
+<div class="photoview__photo">
+	<div class="photo-stage">
+		<img class="photo-stage__image" ng-src="{{photo.source}}">
+		<a class="photo-stage__image-next" ng-click="goNext(photo.id)">Next Photo</a>
+	</div>
+	<div class="photo-info">
+		<h2 class="photo__title">{{photo.name||'No photo title'}}</h2>
+		<div ng-show="tags.length">
+			<h3 class="photo-tags__title">Tags</h3>
+			<ul class="photo-tags__list">
+				<li class="photo-tags__item" ng-repeat="tag in tags">
+					{{tag.name}}
+				</li>
+			</ul>
+		</div>
+		<div ng-show="comments.length">
+			<h3 class="photo-comments__title">Comments</h3>
+			<ul class="photo-coments__list">
+				<li class="photo-coments__item" ng-repeat="comment in comments">
+					<h4 class="photo-comments__item-name">{{comment.from.name}}</h4>
+					<span class="photo-comments__item-message">{{comment.message}}</span>
+					<span class="photo-comments__item-date">{{comment.created_time|moment:'LLL'}}</span>
+				</li>
+			</ul>
+			<a ng-show="more_comments" ng-click="loadNextComments()">Show more comments</a>
+		</div>
+	</div>
+</div>

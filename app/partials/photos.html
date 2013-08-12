@@ -1,0 +1,18 @@
+<section id="photos">
+    <a class="photos-page__albums" href="#/albums">Go to albums</a>
+    <h1 class="photos__title">{{album.name}}</h1>
+    <ul class="photos__list">
+        <li class="photos__item" ng-repeat="photo in photos">
+            <a href="#/album/{{album.id}}/photos/{{photo.id}}" ng-click="openPhoto(photo.id)">
+                <div class="photo__thumbnail" fb-image="photo.images"></div>
+            </a>
+        </li>
+    </ul>
+    <div ng-switch on="has_more">
+        <div ng-switch-when="true">
+            <a class="photos-page__more" ng-click="loadNextPhotos()">Show more photos</a>
+        </div>
+    </div>
+</section>
+<section id="photoview" ui-view>
+</section>

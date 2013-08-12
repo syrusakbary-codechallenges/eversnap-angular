@@ -1,0 +1,81 @@
+#photoview
+	z-index -1
+.photoview__layer
+	position fixed
+	z-index 100
+	top 0
+	bottom 0
+	right 0
+	left 0
+	background:rgba(20,20,20,.85);
+
+.photoview__photo
+	position fixed
+	z-index 200
+	top 0
+	margin 20px
+	background white
+	box-shadow 0 0 10px black
+	overflow: hidden
+
+.photo-stage
+	background black
+	float left
+	text-align center
+	vertical-align middle
+	display table-cell
+	position relative
+	line-height 0
+
+.photo-stage__image-next
+	position absolute
+	right 0
+	top 0
+	bottom 0
+	width 60%
+	background transparent
+	display block
+	cursor hand
+	cursor pointer
+	text-indent -10000px
+
+.photo-stage__image
+	display inline
+	max-width 100%
+
+.photo-info
+	background white
+	width 300px
+	float left
+	height 100%
+	overflow: auto
+	padding .5rem
+
+.photo__title
+	font-size 2rem
+	margin-bottom 1rem
+
+.photo-comments__title
+.photo-tags__title
+	font-size 1.5rem
+	color #666
+	margin .5rem 0
+
+.photo-tags__list
+	list-style circle
+
+
+.photo-coments__item
+	margin .7rem 0
+
+.photo-comments__item-name
+	color #3b5998
+	font-weight bold
+	font-size 1rem
+	margin-bottom .2rem
+
+.photo-comments__item-date
+	color #999
+	display block
+	margin-top .2rem
+	font-size .8rem

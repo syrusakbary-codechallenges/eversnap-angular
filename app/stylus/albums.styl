@@ -1,0 +1,57 @@
+#albums
+	@extends .wrapper
+
+.albums__title
+	@extends .main-title
+
+.albums__list
+	list-style none
+	// &:hover
+	// 	.albums__item
+	// 		opacity .3
+	// 		&:hover
+	// 			opacity: 1
+
+.albums__item
+	width 180px
+	display inline-block
+	vertical-align top
+	position relative
+	margin 10px
+	line-height @height
+	text-align center
+	transition all 200ms linear
+	background white
+	box-shadow 0 2px 5px rgba(0,0,0,.6)
+	// &:hover
+	// 	transform scale(1.1)
+	// 	.albums__name
+	// 		opacity 1
+
+.albums__cover
+	width 180px
+	height @width
+	background-size cover
+	background-position 50% 25%
+	// margin-top -50%
+	// vertical-algin middle
+
+.albums__name
+	margin 1rem
+	// background rgba(0,0,0,.75)
+	color #666
+	text-align center
+	display block
+
+	text-decoration none
+	font-size 1.2rem
+	transition opacity 200ms linear
+
+.albums-page__more
+	text-shadow 0 1px white
+	font-size 1.5rem
+	margin 1em
+	display block
+	text-align center
+	cursor hand
+	cursor pointer

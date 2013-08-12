@@ -1,0 +1,16 @@
+<section id="albums">
+    <h1 class="albums__title">Albums</h1>
+    <ul class="albums__list">
+        <li class="albums__item" ng-repeat="album in albums">
+            <a href="#/album/{{album.id}}/photos/">
+                <div class="albums__cover" style="background-image: url({{album.picture.data.url}})"></div>
+                <span class="albums__name">{{album.name}}</span>
+            </a>
+        </li>
+    </ul>
+    <div ng-switch on="has_more">
+        <div ng-switch-when="true">
+            <a class="albums-page__more" ng-click="loadNextAlbums()">Show more</a>
+        </div>
+    </div>
+</section>

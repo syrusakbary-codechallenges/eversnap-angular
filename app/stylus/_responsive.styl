@@ -1,0 +1,13 @@
+mobile = "only screen and (max-width: 480px)"
+mobile_landscape = "only screen and (min-width: 480px) and (max-width: 799px)"
+tablet = "only screen and (min-width: 800px) and (max-width: 959px)"
+
+.wrapper
+    width 800px
+    margin 0 auto
+    @media only screen and (max-width: 399px)
+        width 200px
+    @media only screen and (min-width: 400px) and (max-width: 599px)
+        width 400px
+    @media only screen and (min-width: 600px) and (max-width: 799px)
+        width 600px
