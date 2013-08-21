@@ -22,18 +22,24 @@ a{text-decoration:none}
 .photos__item{width:180px;height:180px;overflow:hidden;display:inline-block;position:relative;margin:10px;line-height:180px;text-align:center;-webkit-transition:all 200ms linear;-moz-transition:all 200ms linear;-o-transition:all 200ms linear;-ms-transition:all 200ms linear;transition:all 200ms linear;background:#fff;-webkit-box-shadow:0 2px 5px rgba(0,0,0,0.6);box-shadow:0 2px 5px rgba(0,0,0,0.6);}
 .photos__item:hover{-webkit-transform:scale(1.1);-moz-transform:scale(1.1);-o-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1);}
 .photos__item:hover .albums__name{opacity:1;-ms-filter:none;filter:none}
-.photo__thumbnail{width:180px;height:180px;-webkit-background-size:cover;-moz-background-size:cover;background-size:cover;background-position:50% 25%}
+.photo__thumbnail{width:180px;height:180px;-webkit-background-size:cover !important;-moz-background-size:cover !important;background-size:cover !important;background-position:50% 25% !important}
 .photos-page__more{text-shadow:0 1px #fff;font-size:1.5rem;margin:1em;display:block;text-align:center;cursor:hand;cursor:pointer}
-#photoview{z-index:-1}
-.photoview__layer{position:fixed;z-index:100;top:0;bottom:0;right:0;left:0;background:rgba(20,20,20,0.85)}
-.photoview__photo{position:fixed;z-index:200;top:0;margin:20px;background:#fff;-webkit-box-shadow:0 0 10px #000;box-shadow:0 0 10px #000;overflow:hidden}
-.photo-stage{background:#000;float:left;text-align:center;vertical-align:middle;display:table-cell;position:relative;line-height:0}
+#photoview{display:none;position:fixed;overflow:auto;top:0;right:0;bottom:0;left:0;}
+#photoview.photoview-active{display:block}
+.photoview__layer{position:fixed;z-index:100;top:0;width:100%;height:100%;background:rgba(20,20,20,0.85)}
+.photoview__photo{display:inline-block;position:relative;z-index:200;margin:20px;background:#fff;-webkit-box-shadow:0 0 10px #000;box-shadow:0 0 10px #000;overflow:hidden}
+.photo-stage{background:#000;float:left;text-align:center;vertical-align:middle;background:#000;display:table-cell;position:relative;line-height:0}
 .photo-stage__image-next{position:absolute;right:0;top:0;bottom:0;width:60%;background:transparent;display:block;cursor:hand;cursor:pointer;text-indent:-10000px}
 .photo-stage__image{display:inline;max-width:100%}
-.photo-info{background:#fff;width:300px;float:left;height:100%;overflow:auto;padding:.5rem}
+.photo-info{background:#fff;height:100%;overflow:auto;padding:.5rem}
+.photo-stage{margin-right:300px}
+.photo-info{position:absolute;width:300px;overflow:auto;top:0;bottom:0;right:0}
 .photo__title{font-size:2rem;margin-bottom:1rem}
 .photo-comments__title,.photo-tags__title{font-size:1.5rem;color:#666;margin:.5rem 0}
 .photo-tags__list{list-style:circle}
 .photo-coments__item{margin:.7rem 0}
 .photo-comments__item-name{color:#3b5998;font-weight:bold;font-size:1rem;margin-bottom:.2rem}
 .photo-comments__item-date{color:#999;display:block;margin-top:.2rem;font-size:.8rem}
+@media only screen and (max-width: 799px){.photo-stage{margin-right:0;width:100%}
+.photo-info{width:100%;position:relative;top:auto;left:auto;right:auto;bottom:auto}
+}

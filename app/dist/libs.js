@@ -1,4 +1,4 @@
-/*! eversnap - v0.0.1 - 2013-08-11 */
+/*! eversnap - v0.0.1 - 2013-08-21 */
 /*!
  * jQuery JavaScript Library v1.10.2
  * http://jquery.com/

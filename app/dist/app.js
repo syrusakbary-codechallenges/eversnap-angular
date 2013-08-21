@@ -33,13 +33,10 @@
       url: ':photoId',
       templateUrl: 'partials/photoview.html',
       onEnter: function() {
-        return $('body').css({
-          position: 'fixed',
-          width: '100%'
-        });
+        return $('#photoview').addClass('photoview-active');
       },
       onExit: function() {
-        return $('body').css('position', '');
+        return $('#photoview').removeClass('photoview-active');
       },
       resolve: {
         photo: function($q, $stateParams, $photo) {
@@ -157,13 +154,19 @@
 (function() {
   var ConnectController, module;
 
-  ConnectController = function($scope, $location, storage, photo) {
-    return $scope.connected = !!storage.get('access_token');
+  ConnectController = function($scope, $timeout, $location, storage, photo) {
+    $scope.connected = !!storage.get('access_token');
+    $scope.$on('dataLoaded', function() {
+      return $timeout(function() {
+        return FB.XFBML.parse();
+      }, 0, false);
+    });
+    return $scope.$broadcast('dataLoaded');
   };
 
   module = angular.module("eversnap.controllers.connect", []);
 
-  module.controller("ConnectController", ["$scope", "$location", "storage", ConnectController]);
+  module.controller("ConnectController", ["$scope", "$timeout", "$location", "storage", ConnectController]);
 
 }).call(this);
 
@@ -219,6 +222,7 @@
 
   PhotoViewController = function($scope, $location, photo) {
     var loadNextComments, refreshComments, _ref;
+    $('#photoview').addClass('photoview-active');
     $scope.photo = photo.data;
     $scope.tags = (_ref = photo.tags) != null ? _ref.data : void 0;
     $scope.ratio = photo.data.width / photo.data.height;
@@ -715,7 +719,7 @@
         var setSrc;
         setSrc = function(src) {
           console.log(src, elm);
-          return elm.css('background', "url(" + src + ")");
+          return elm.css('background-image', "url(" + src + ")");
         };
         return attrs.$observe('fbImage', function(value) {
           var filtered, minWidth, src;
