@@ -1,0 +1,6 @@
+/app/coffee
+/app/stylus
+/node_modules
+/Gruntfile.coffee
+/package.json
+/README.rst
